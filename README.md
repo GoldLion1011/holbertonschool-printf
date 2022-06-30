@@ -1,5 +1,6 @@
 Creating a basic printf-like function
 
+Authors: Sarah McGowan, Brandon Brown // TUL-C18
 Holberton School TUL Foundations Programming
 
 Requirements
