@@ -4,11 +4,13 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 int _printf(const char *format, ...);
-
-
-
+int _putchar(char c); 
+int conv_s(va_list arg);
+int conv_c(va_list arg);
+int conv_i(va_list arg);
 
 
 #endif
