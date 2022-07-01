@@ -6,6 +6,13 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+typedef struct printer
+{
+	char *spec;
+	int (*func)(va_list);
+
+} printer_t;
+
 int _printf(const char *format, ...);
 int _putchar(char c); 
 int conv_s(va_list arg);
