@@ -20,11 +20,15 @@ int conv_s(va_list arg)
 
 int conv_c(va_list arg)
 {
-	char *c = va_arg(arg, char *);
+	char c = va_arg(arg, char);
 
-	if (c == NULL)
-		c = "(null)";
+	if (!c)
+		return (0);
 
 	if (c != NULL)
 		_putchar(c);
+		return (1);
 }
+
+int conv_i(va_list arg)
+{
