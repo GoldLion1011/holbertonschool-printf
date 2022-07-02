@@ -22,6 +22,7 @@ int conv_s(va_list arg)
 	return (length);
 }
 
+
 /**
  * conv_c - prints a character
  * @arg: the format
