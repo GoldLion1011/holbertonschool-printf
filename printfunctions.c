@@ -1,7 +1,11 @@
 #include "main.h"
 
-
-
+/**
+ * conv_s - prints a string
+ * @arg: format
+ *
+ * Return: string
+ */
 int conv_s(va_list arg)
 {
 	int length;
@@ -18,6 +22,12 @@ int conv_s(va_list arg)
 	return (length);
 }
 
+/**
+ * conv_c - prints a character
+ * @arg: the format
+ *
+ * Return: an integer
+ */
 int conv_c(va_list arg)
 {
 	char c = va_arg(arg, int);
@@ -30,6 +40,12 @@ int conv_c(va_list arg)
 		return (1);
 }
 
+/**
+ * conv_i - prints an intger
+ * @arg: integer
+ *
+ * Return: none
+ */
 int conv_i(va_list arg)
 {
 	int num;

@@ -1,8 +1,10 @@
 #include "main.h"
-
-
-
-
+/**
+ * _printf - print strings and int
+ * @format: specifier
+ *
+ *
+ */
 int _printf(const char *format, ...)
 {
 	char i;

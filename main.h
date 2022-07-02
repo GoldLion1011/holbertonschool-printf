@@ -6,6 +6,17 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+typedef struct print
+	{	
+		char *conv;
+		int(*f)(va_list);
+	} flag;
+
+
+
+
+
+
 int _printf(const char *format, ...);
 int _putchar(char c); 
 int conv_s(va_list arg);
