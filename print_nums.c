@@ -6,11 +6,11 @@
  * @print: print
  * Return: a function
  */
-int print_nums(char *print, va_list arg)
+int print_nums(char print, va_list arg)
 {
 	int i;
 
-	flag funct[] = {
+	printer_t funct[] = {
 		{"i", conv_i},
 		{"c", conv_c},
 		{"s", conv_s},
@@ -18,10 +18,10 @@ int print_nums(char *print, va_list arg)
 		{NULL, NULL}
 	};
 
-	for (i = 0; funct[i].mod != NULL; i++)
+	for (i = 0; funct[i].spec != NULL; i++)
 	{
-		if (funct[i].mod[0] == print)
-			return (funct[i].f(arg));
+		if (funct[i].spec[0] == print)
+			return (funct[i].func(arg));
 	}
 	return (0);
 }
