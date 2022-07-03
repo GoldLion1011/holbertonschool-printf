@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdarg.h>
 
 /**
  * conv_s - prints a string
@@ -24,8 +25,8 @@ int conv_s(va_list arg)
 
 
 /**
- * conv_c - prints a character
- * @arg: the format
+ * conv_c - prints a character to standard output
+ * @arg: list of arguments
  *
  * Return: an integer
  */
@@ -70,4 +71,15 @@ int conv_i(va_list arg)
 	i = i / 10;
 	count++;
 	}
+}
+
+/**
+ * print_percent - prints a "%"
+ *
+ * Return: number of arguments printed
+ */
+int print_percent(void)
+{
+	_putchar('%');
+	return (1);
 }
