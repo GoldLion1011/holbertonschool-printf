@@ -1,0 +1,13 @@
+.TH man 8 "04 July 2022" "1.0" "_printf man page"
+.SH NAME
+_printf - create a copy of the standard printf function
+.SH SYNOPSIS
+_printf Format [ARGUMENT]
+.SH DESCRIPTION
+ Prints argument(s) using the format string. The format string is comprised of 0 or more directives. Each conversion specifer is introcded by the "%" character. The specifer uses the corresponding arguent(s) to print the variable.
+.SH OPTIONS
+
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Sarah McGowan, Brandon Brown
