@@ -6,23 +6,32 @@
  * @print: print
  * Return: a function
  */
-int print_nums(char print, va_list arg)
-{
-	int i;
+int print_nums(va_list arg)
+{	int count = 1;	
+	int i = va_arg(arg, int);
 
-	printer_t funct[] = {
-		{"i", conv_i},
-		{"c", conv_c},
-		{"s", conv_s},
-		{"d", conv_d},
-		{NULL, NULL}
-	};
-
-	for (i = 0; funct[i].spec != NULL; i++)
+	if (i < 0)
 	{
-		if (funct[i].spec[0] == print)
-			return (funct[i].func(arg));
+		_putchar('_');
+		count++;
+		i = i * -1;
+	}	
+	print_more(i);
+	while (i / 10 != 0)
+	{
+		count++;
+		i = i / 10;
 	}
-	return (0);
+	return (count);
 }
 
+int print_more(int j)
+{
+	if ((j / 10) != 0)
+	{
+		print_more(j / 10);
+	}
+		_putchar('0' +(j % 10));
+	
+return (0);
+}

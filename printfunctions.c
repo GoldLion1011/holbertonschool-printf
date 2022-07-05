@@ -32,7 +32,7 @@ int conv_s(va_list arg)
  */
 int conv_c(va_list arg)
 {
-	char c = va_arg(arg, int);
+	char c = (char)va_arg(arg, int);
 
 	if (!c)
 		return (0);
@@ -73,18 +73,7 @@ int conv_i(va_list arg)
 	i = i / 10;
 	count++;
 	}
-	return (1);
-}
-
-/**
- * print_percent - prints a "%"
- *
- * Return: number of arguments printed
- */
-int print_percent(void)
-{
-	_putchar('%');
-	return (1);
+	return (count);
 }
 
 /**

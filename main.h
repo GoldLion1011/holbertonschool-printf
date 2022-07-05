@@ -13,12 +13,14 @@ typedef struct printer
 
 } printer_t;
 
+int (*get_func(char conv_spec))(va_list);
 int _printf(const char *format, ...);
 int _putchar(char c); 
 int conv_s(va_list arg);
 int conv_c(va_list arg);
+int print_more(int j);
 int conv_i(va_list arg);
-int conv_d(va_list arg);
 char *_itoa(int num, char *str);
+int print_nums(va_list);
 
 #endif
