@@ -86,3 +86,33 @@ int print_percent(void)
 	_putchar('%');
 	return (1);
 }
+
+/**
+  * _itoa - converts int to char
+  * @str: argument
+  * @num: int
+  * Return: ints converted to char
+  */
+char *_itoa(int num, char *str)
+{
+	int i = 0;
+	char negative;
+
+	if (num < 0)
+	{
+		negative = 1;
+		num = num * -1;
+	}
+		while (num > 0)
+		{
+			str[i] = num % 10 + '0';
+			num = num / 10;
+			i++;
+		}
+		if (negative)
+		{
+			str[i] = '-';
+			str[i + 1] = '\0';
+		}
+	return (str);
+}
