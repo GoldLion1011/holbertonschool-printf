@@ -2,23 +2,23 @@
 #include <limits.h>
 
 /**
- * print_nums - prints specific function
- * @arg: format
- * @print: print
- * Return: a function
- */
+  * print_nums - prints specific function
+  * @arg: format
+  * @print: print
+  * Return: a function
+  */
 int print_nums(va_list arg)
-{	
-	int j;
-	int count = 1;	
+{
+	int h;
+	int count = 1;
 	int i = va_arg(arg, int);
 	char t[11] = {"-2147483648"};
 
 	if (i == INT_MIN)
 	{
-		for (j = 0; j <= 10; j++)
+		for (h = 0; h <= 10; h++)
 		{
-			_putchar(t[j]);
+			_putchar(t[h]);
 		}
 		return (11);
 	}
@@ -27,7 +27,7 @@ int print_nums(va_list arg)
 		_putchar('_');
 		count++;
 		i = i * -1;
-	}	
+	}
 	print_more(i);
 	while (i / 10 != 0)
 	{
@@ -43,7 +43,7 @@ int print_more(int j)
 	{
 		print_more(j / 10);
 	}
-		_putchar('0' +(j % 10));
-	
-return (0);
+		_putchar('0' + (j % 10));
+
+	return (0);
 }
