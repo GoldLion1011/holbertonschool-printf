@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-  *
-  *
-  *
+  * get_func - pointer to array
+  * @conv_spec: specifiers
+  * Return: function that is pointed to
   */
 
 int (*get_func(char conv_spec))(va_list)
@@ -17,19 +17,16 @@ int (*get_func(char conv_spec))(va_list)
 		{"d", print_nums},
 		{NULL, NULL}
 	};
-	
 	for (j = 0; funct[j].spec[0] != conv_spec; j++)
 	{
 		if (funct[j].spec == NULL)
 			return (NULL);
 	}
-
 	return (funct[j].func);
 }
 /**
  * _printf - print strings and chars to stdout
  * @format: specifier to print
- *
  * Return: number of characters printed
  */
 int _printf(const char *format, ...)
@@ -42,7 +39,6 @@ int _printf(const char *format, ...)
 	va_start(arg, format);
 	if (format == NULL)
 		return (-1);
-
 	while (format[i] != '\0')
 	{
 		for (i = i; format[i] != '%'; i++)
@@ -52,13 +48,11 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			counter++;
 		}
-
 		if (format[i + 1] == '%')
 		{
 			_putchar('%'), counter++, i += 2;
 		continue;
 		}
-
 		if (format[i] == '%')
 		{
 			i = i + 1;
@@ -73,12 +67,5 @@ int _printf(const char *format, ...)
 			i = i + 1;
 		}
 	}
-	
 	return (counter);
-
-}		
-/*	for (i = 0; func[i].spec != NULL; i++)
-	{
-		if (*func[i].spec[0] == print)
-			return (func[i].func(arg));
-	}*/
+}
