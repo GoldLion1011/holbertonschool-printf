@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _printf - print strings and int to stdout
+ * _printf - print strings and chars to stdout
  * @format: specifier to print
  *
  * Return: number of characters printed
@@ -27,11 +27,27 @@ int _printf(const char *format, ...)
 	{
 		_putchar(format[i]);
 		i++;
-	}
 
+		if (format[i + 1] == '%')
+		{
+			_putchar('%'), counter++, i++;
+		continue;
+		}
+
+		else if (format[i + 1] == 'c')
+		{
+			_putchar(funct[c].spec);
+		continue;
+		}
+
+		else (format[i + 1] == 's')
+		{
+			_putchar(funct[s].spec);
+		}		
+			
 	for (i = 0; funct[i].spec != NULL; i++)
 	{
-		if (funct[i].spec[0] == print)
-			return (funct[i].func(arg));
+		if (*func[i].spec[0] == print)
+			return (func[i].func(arg));
 	}
 	return (0);
