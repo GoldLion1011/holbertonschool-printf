@@ -6,6 +6,12 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+/**
+  * struct printer - instructs for _printf
+  * @spec: specifier to id and print
+  * @func: list of functions
+  */
+
 typedef struct printer
 {
 	char *spec;
@@ -15,7 +21,7 @@ typedef struct printer
 
 int (*get_func(char conv_spec))(va_list);
 int _printf(const char *format, ...);
-int _putchar(char c); 
+int _putchar(char c);
 int conv_s(va_list arg);
 int conv_c(va_list arg);
 int print_more(int j);
