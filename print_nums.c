@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 
 /**
  * print_nums - prints specific function
@@ -7,9 +8,20 @@
  * Return: a function
  */
 int print_nums(va_list arg)
-{	int count = 1;	
+{	
+	int j;
+	int count = 1;	
 	int i = va_arg(arg, int);
+	char t[11] = {"-2147483648"};
 
+	if (i == INT_MIN)
+	{
+		for (j = 0; j <= 10; j++)
+		{
+			_putchar(t[j]);
+		}
+		return (11);
+	}
 	if (i < 0)
 	{
 		_putchar('_');
