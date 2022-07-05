@@ -15,9 +15,23 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 
+	printer_t funct[] = {
+		{"i", conv_i},
+		{"c", conv_c},
+		{"s", conv_s},
+		{"d", conv_d},
+		{NULL, NULL}
+	};
+
 	while (format[i] != '\0')
 	{
 		_putchar(format[i]);
 		i++;
 	}
-}
+
+	for (i = 0; funct[i].spec != NULL; i++)
+	{
+		if (funct[i].spec[0] == print)
+			return (funct[i].func(arg));
+	}
+	return (0);
