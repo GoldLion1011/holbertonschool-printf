@@ -36,9 +36,11 @@ int conv_c(va_list arg)
 
 	if (!c)
 		return (0);
-
-	if (c != '\0');
+	{
+	if
+	(c != '\0')
 		_putchar(c);
+	}
 		return (1);
 }
 
@@ -55,7 +57,7 @@ int conv_i(va_list arg)
 	int count = 0;
 
 	num = va_arg(arg, int);
-	
+
 	if (num < 0)
 	{
 		_putchar('_');
@@ -71,6 +73,7 @@ int conv_i(va_list arg)
 	i = i / 10;
 	count++;
 	}
+	return (1);
 }
 
 /**
