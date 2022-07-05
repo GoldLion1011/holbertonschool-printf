@@ -19,5 +19,6 @@ int conv_s(va_list arg);
 int conv_c(va_list arg);
 int conv_i(va_list arg);
 int conv_d(va_list arg);
+char *_itoa(int num, char *str);
 
 #endif
