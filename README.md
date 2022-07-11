@@ -1,73 +1,33 @@
-Creating a basic printf-like function
+## Printf-like function for Holberton School-TUL
 
-Authors: Sarah McGowan, Brandon Brown // TUL-C18
-Holberton School TUL Foundations Programming
+Written by Sarah McGowan and Brandon Brown, Cohort 18
 
-Requirements
+**Purpose**
+We are writing a function that produces output according to a format, using the format specifiers %s, %c, %d, and %i. 
 
-General:
+ *Our general guidelines*
 
-Allowed editors: vi, vim, emacs
-All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
-All your files should end with a new line
-A README.md file, at the root of the folder of the project is mandatory
-Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
-You are not allowed to use global variables
-No more than 5 functions per file
-In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
-The prototypes of all your functions should be included in your header file called main.h
-Don’t forget to push your header file
-All your header files should be include guarded
-Note that we will not provide the _putchar function for this project
+ - Use the prototype: *int _printf(const char  _format, ...);
+ -   Print all of format to std output and handle the conversion specifiers: "c", "s", "%", "d", and "i"
+ -   Returns the number of characters printed
+ -   written in vi, vim, or emacs
+ -   compiled with the following  `gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c`
+ - No more than five functions per file
 
+**Using the function**
+The end user of *_printf()* will be able to print their inputted format string, and have the use of format specifiers reserve space for the value variable types character, string, decimal, and integer.
 
-Guidlines:
+*Example:*
 
-Authorized functions and macros
-write (man 2 write)
-malloc (man 3 malloc)
-free (man 3 free)
-va_start (man 3 va_start)
-va_end (man 3 va_end)
-va_copy (man 3 va_copy)
-va_arg (man 3 va_arg)
-Compilation
-Your code will be compiled this way:
-$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
-Our main files will include your main header file (main.h): #include main.h
+    char c = 'x';
+    char *s = "betty is rad";
+    int i = 7;
 
+    _printf("I have a char: %c, a string: %s, and an integer: %d.", c, s, int);
 
-Mandatory Tasks:
+```
 
-0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life
+**About Us**
+![Brandon enjoys rollercoasters and being very tall](https://ca.slack-edge.com/E01BXJ5C1PT-U03CWSMGF42-7cc4c9b6140e-512)
+![Sarah is a former healthcare professional/future beach bum who loves animals, hiking, yoga, cooking, travel, and good hair days](https://ca.slack-edge.com/E01BXJ5C1PT-U03CQ7UCXBQ-139d5cac17a3-512)
 
-Write a function that produces output according to a format.
-
-Prototype: int _printf(const char *format, ...);
-Returns: the number of characters printed (excluding the null byte used to end output to strings)
-write output to stdout, the standard output stream
-format is a character string. The format string is composed of zero or more directives. See man 3 printf for more detail. You need to handle the following conversion specifiers:
-c
-s
-%
-You don’t have to reproduce the buffer handling of the C library printf function
-You don’t have to handle the flag characters
-You don’t have to handle field width
-You don’t have to handle precision
-
-1. Education is when you read the fine print. Experience is what you get if you don't
-mandatory
-
-Handle the following conversion specifiers:
-
-d
-i
-You don’t have to handle the flag characters
-You don’t have to handle field width
-You don’t have to handle precision
-You don’t have to handle the length modifiers
-
-2. Just because it's in print doesn't mean it's the gospel
-mandatory
-
-Create a man page for your function.
