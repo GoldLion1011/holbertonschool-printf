@@ -28,7 +28,6 @@ The end user of *_printf()* will be able to print their inputted format string, 
 ```
 
 **About Us**
-![Brandon has a background in working with people of all ages. He loves star gazing, music, movies, traveling, and learning about ancient history. ](https://ca.slack-edge.com/E01BXJ5C1PT-U03CWSMGF42-7cc4c9b6140e-512)
-![Sarah is a former healthcare professional/future beach bum who loves animals, hiking, yoga, cooking, art, travel, and good hair days](https://ca.slack-edge.com/E01BXJ5C1PT-U03CQ7UCXBQ-139d5cac17a3-512)
-
+![Brandon has a background in working with people of all ages. He loves star gazing, music, movies, traveling, and learning about ancient history. ] <a href= "(https://github.com/bbrown585><img src="https://ca.slack-edge.com/E01BXJ5C1PT-U03CWSMGF42-7cc4c9b6140e-512"></a>
+![Sarah is a former healthcare professional/future beach bum who loves animals, hiking, yoga, cooking, art, travel, and good hair days] <a href= "https://github.com/GoldLion1011><img src= "https://ca.slack-edge.com/E01BXJ5C1PT-U03CQ7UCXBQ-139d5cac17a3-512"></a>
 
